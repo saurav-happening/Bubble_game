@@ -38,7 +38,7 @@ function countdown_timer(){
         // when time become 0 remove bubbles that is bottom-panel
 
         
-        bottom_panel.innerHTML = `<h1>Game Over : ${score_value}</h1>`
+        bottom_panel.innerHTML = ""
 
         
     }
