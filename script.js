@@ -39,7 +39,7 @@ function countdown_timer(){
 
         
         bottom_panel.innerHTML = `<h1>Game Over : ${score_value}</h1>`
-
+        console.log("hello");
         
     }
 },1000)}
