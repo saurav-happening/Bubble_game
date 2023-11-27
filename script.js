@@ -1,6 +1,9 @@
 let score_value = 0;
 let random_num = 0;
 let bottom_panel = document.querySelector("#bottom-panel")
+// let final_score = document.querySelector("final_score")
+// let play_again = document.querySelector("play_again")
+
 
 // creating bubble div
 
@@ -26,7 +29,7 @@ function creating_bubble(){
 // countdown timer
 
 function countdown_timer(){
-    let countdown = 5
+    let countdown = 1
     let count_timer = setInterval(function(){
     if(countdown>0){
         countdown--;
@@ -37,16 +40,36 @@ function countdown_timer(){
 
         // when time become 0 remove bubbles that is bottom-panel
 
+        bottom_panel.innerHTML = ""
+        again_play()
         
-        bottom_panel.innerHTML = `<h1>Game Over : ${score_value}</h1>`
-        console.log("hello");
+        
         
     }
 },1000)}
 
 
+// creating button to play again
 
+// adding final score also by creating new element and appending to bottom panel
 
+let bt = document.createElement("button")
+let socre_display = document.createElement("h3")
+
+function again_play(){
+    bt.classList.add('play_button')
+    bt.innerText = 'Try Again'
+    bottom_panel.appendChild(bt)
+
+    socre_display.classList.add('score_disp')
+    socre_display.innerHTML = `Final socre : ${score_value}`
+    bottom_panel.appendChild(socre_display)
+
+    bottom_panel.style.display = "inline-block"
+
+    
+
+}
 
 
 
