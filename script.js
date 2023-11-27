@@ -29,7 +29,7 @@ function creating_bubble(){
 // countdown timer
 
 function countdown_timer(){
-    let countdown = 1
+    let countdown = 2
     let count_timer = setInterval(function(){
     if(countdown>0){
         countdown--;
@@ -67,7 +67,16 @@ function again_play(){
 
     bottom_panel.style.display = "inline-block"
 
-    
+    try_again()
+
+}
+
+function try_again(){
+    bt.addEventListener("click", function(){
+        creating_bubble()
+        countdown_timer()
+        hit_value()
+    })
 
 }
 
